@@ -1,0 +1,31 @@
+environment = "prod"
+owner       = "platform-team"
+cost_center = "media-prod"
+
+# Landing Zone remote state (read-only)
+landing_zone_state_bucket = "<landing-zone-state-bucket>"
+landing_zone_state_key    = "<landing-zone-state-key>"
+landing_zone_state_region = "<landing-zone-state-bucket-region>"
+
+# Optional: serve under your domain. Must be covered by the Landing Zone us-east-1 certificate.
+# cloudfront_aliases = ["media.yourdomain.com"]
+
+enable_media_package    = false # live channel (deployed from eu-west-1)
+enable_aurora           = false
+enable_replication      = true
+enable_dynamodb_replica = true
+
+# stage/prod need Customer Managed Keys. The Landing Zone must switch key_strategy and export keys,
+# and eu-west-1 keys must be supplied here (the Landing Zone exports none for the DR region).
+dr_kms_key_arns = {
+  s3       = "arn:aws:kms:eu-west-1:<account-id>:key/<id>"
+  dynamodb = "arn:aws:kms:eu-west-1:<account-id>:key/<id>"
+  rds      = "arn:aws:kms:eu-west-1:<account-id>:key/<id>"
+  backup   = "arn:aws:kms:eu-west-1:<account-id>:key/<id>"
+  secrets  = "arn:aws:kms:eu-west-1:<account-id>:key/<id>"
+}
+
+jwt_issuer   = "https://<idp-issuer>"
+jwt_audience = ["<api-audience>"]
+
+enable_shield_advanced = false # requires a Shield Advanced subscription
