@@ -81,6 +81,6 @@ WAF in front of the API and media, OAC-only private buckets, TLS-only policies, 
 
 **Emmanuel Mulenga** — Multi-Cloud Engineer
 - 🌐 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emmanuel-mulenga)
-- 💻 [![GitHub Profile](https://img.shields.io/badge/GitHub-e--mulenga-181717?style=flat&logo=github)](https://github.com/e-mulenga)
+💻 [![GitHub Profile](<a href="https://img.shields.io/badge/GitHub-e--mulenga-181717?style=flat&logo=github)](https://github.com/e-mulenga
 
 ---
